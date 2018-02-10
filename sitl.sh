@@ -2,7 +2,7 @@
 xhost +
 
 docker run -it --rm --privileged \
-    -v /home/ankommen/Documents/sitl_doc:/home/root/src:rw \
+    -v `pwd`:/home/root/src:rw \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e DISPLAY=:0 \
     -p 14556:14556/udp \
