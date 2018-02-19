@@ -14,3 +14,4 @@ create a copy of iris_opt_flow init file in Firmware/posix-configs/SITL/ekf2/ di
 Every new vehicle model constructed must be included into this directory dependeing on the position estimator used, lpe/ekf2 etc.
 
 
+Try with high power system since one core is always fully occupied and gives hard time sync errors.
