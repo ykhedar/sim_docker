@@ -16,3 +16,17 @@
 * sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 * sudo apt-get update
 * sudo apt-get install docker-ce
+
+**PX4 repository download**
+* Clone the PX4 repository 
+https://github.com/PX4/Firmware.git
+
+
+
+**TODO**
+- [x] Create repo for simulation
+- [ ] Remove run_sitl_in_docker.sh and make it part of run time.
+- [ ] Add Mesh from some test flights
+- [ ] Create a custom gazebo and ros package where all of the custom things would go.
+
+
