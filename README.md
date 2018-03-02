@@ -1,8 +1,8 @@
-# sim_docker
+# Installation and running steps
 
 **General Notes**
-1. Ensure that the driver version for Nvidia is the same in Host and Docker. Otherwise graphics would not work.
-      Check it after installation using "nvidia-smi" CLI if they are the same.
+1. Ensure that the driver version for Nvidia is the same in Host and Docker. Otherwise graphics would not work. One would not be able to see the GUI of Gazebo or any other GUI from the docker.
+Check it after installation using "nvidia-smi" CLI if they are the same.
       
 
 **Docker**
@@ -17,9 +17,12 @@
 * sudo apt-get update
 * sudo apt-get install docker-ce
 
-**PX4 repository download**
-* Clone the PX4 repository 
+**First steps**
+* *PX4 repository download* Clone the PX4 repository in the sim_docker directory.
 https://github.com/PX4/Firmware.git
+* Build the docker image using the ./build.sh command in the sim_docker directory
+* Run the docker by running the ./sitl.sh script in the same directory.
+* When a new terminal is required to access the docker, one could run the ./term.sh script again from the same directory.
 
 
 
@@ -30,7 +33,7 @@ https://github.com/PX4/Firmware.git
 - [ ] Create a custom gazebo and ros package where all of the custom things would go.
 
 
-**Extra Infos**
+**Extra Infos/potential bugs**
 * When creating new models for the copter do the following in the custom sitl_gazebo package which is in this repo. The path to this package is already included in the run_sitl_in_docker script.
 
 * Create a copy of iris_opt_flow.world and name it iris_visual.world create a copy of px4flow in the models folder and rename it to cam and all the details in the folder also needs to be renamed. create a copy of iris_opt_flow in the models directory and rename it to iris_visual.
