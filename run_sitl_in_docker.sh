@@ -2,7 +2,7 @@
 
 
 cd home/root/src/Firmware/
-#make posix_sitl_default gazebo
+make posix_sitl_default gazebo
 
 #export PX4_HOME_LAT=52.314157
 #export PX4_HOME_LON=10.548070
@@ -18,10 +18,10 @@ source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/posix_sitl_default
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
 
 # For sitl_gazebo package
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/../sitl_gazebo
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
 
 # Additional gazebo model path
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(pwd)/../sitl_gazebo/models
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:$(pwd)/Tools/sitl_gazebo/models
 
 # Now launch the main file. 
-roslaunch px4 mavros_posix_sitl.launch
+roslaunch px4 posix_sitl.launch
