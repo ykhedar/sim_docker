@@ -17,6 +17,11 @@ RUN apt update && apt install -y --no-install-recommends module-init-tools kmod 
 
 RUN ./NVIDIA-Linux-x86_64-384.111.run -a -N --ui=none --no-kernel-module
 
+RUN apt update && apt install -y --no-install-recommends ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-dev \
+                ros-kinetic-gazebo-plugins ros-kinetic-gazebo-ros gazebo7  \
+                libgazebo7-dev libgazebo7 libignition-math2 \ 
+                libsdformat4 libgazebo7 libsdformat4 && rm -rf /var/lib/apt/lists/*
+
 COPY run_sitl_in_docker.sh /
 
 ENTRYPOINT ["/run_sitl_in_docker.sh"]
