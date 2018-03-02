@@ -17,6 +17,9 @@
 * sudo apt-get update
 * sudo apt-get install docker-ce
 
+**PX4 repository download**
+* Clone the PX4 repository 
+https://github.com/PX4/Firmware.git
 
 
 
