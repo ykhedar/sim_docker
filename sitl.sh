@@ -1,4 +1,10 @@
+#! /bin/bash
 # enable access to xhost from the container
+
+if [[ $1 = "bash" ]]; then
+	option="--entrypoint=/bin/bash"
+fi
+
 xhost +
 
 docker run -it --rm --privileged \
@@ -6,4 +12,4 @@ docker run -it --rm --privileged \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e DISPLAY=:0 \
     -p 14556:14556/udp \
-    --name=sitl_ankommen sitl:latest
+    --name=sitl_ankommen $option sitl:latest
