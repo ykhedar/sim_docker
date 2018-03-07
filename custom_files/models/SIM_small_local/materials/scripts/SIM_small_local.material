@@ -1,0 +1,14 @@
+material SmallLocal/Normal
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture SIM_small_local.jpg
+      }
+    }
+  }
+}

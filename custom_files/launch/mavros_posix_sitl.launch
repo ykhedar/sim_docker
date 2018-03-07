@@ -2,8 +2,8 @@
 <launch>
     <!-- vehicle model and world -->
     <arg name="est" default="lpe"/>
-    <arg name="vehicle" default="iris_visual"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
+    <arg name="vehicle" default="typhoon_h480"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/village.world"/>
     <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf"/>
     <arg name="rcS" default="$(find px4)/posix-configs/SITL/init/$(arg est)/$(arg vehicle)"/>
     <!-- PX4 SITL and Gazebo -->
