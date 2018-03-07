@@ -17,10 +17,20 @@ Check it after installation using "nvidia-smi" CLI if they are the same.
 * sudo apt-get update
 * sudo apt-get install docker-ce
 
-**First steps**
+**First steps - Need to be done only during first time**
 * *PX4 repository download* Clone the PX4 repository in the sim_docker directory.
 https://github.com/PX4/Firmware.git
 * Build the docker image using the ./build.sh command in the sim_docker directory
+* Enter the docker image just built in the previous step in 'bash' mode by executing the command 
+```bash
+$ ./sitl.sh bash
+```
+* Now create the gazebo default target using the following commands
+```bash
+$ cd home/root/src/Firmware/
+$ make posix_sitl_default gazebo
+```
+**Normal Usage** 
 * Run the docker by running the ./sitl.sh script in the same directory.
 * When a new terminal is required to access the docker, one could run the ./term.sh script again from the same directory.
 
