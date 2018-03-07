@@ -29,6 +29,9 @@ https://github.com/PX4/Firmware.git
 **TODO**
 - [x] Create repo for simulation
 - [ ] Remove run_sitl_in_docker.sh and make it part of run time.
-- [ ] Add Mesh from some test flights
+- [x] Add Mesh from some test flights
 - [ ] Auto-copy files from the custom_files folder to the Firmware directory before the start of the simulation.
 - [ ] Create a pre-process script which downloads and sets-up the repository.
+
+**Notes**
+* typhoon_h480 model has a gimbal stabilised camera which has a resolution of 640x380. But for higher resolution there seems to be some extra effort required. More research.
