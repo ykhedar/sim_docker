@@ -75,3 +75,4 @@ Intermediate/*
 DerivedDataCache/*
 
 Firmware/
+.DS_Store
