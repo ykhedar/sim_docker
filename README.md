@@ -46,4 +46,11 @@ $ sudo apt-get install nvidia-384
 ```
 
 * typhoon_h480 model has a gimbal stabilised camera which has a resolution of 640x380. But for higher resolution there seems to be some extra effort required. More research.
+
+* To set the gimbal position at looking downward with the typhoon copter, one needs to set the following parameters in the sdf file for the model.
+
+```xml
+<zero_position_disarmed>-0.5</zero_position_disarmed>
+<zero_position_armed>-0.5</zero_position_armed>
+```
       
