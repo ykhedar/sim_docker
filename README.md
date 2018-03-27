@@ -50,7 +50,15 @@ $ sudo apt-get install nvidia-384
 * To set the gimbal position at looking downward with the typhoon copter, one needs to set the following parameters in the sdf file for the model.
 
 ```xml
-<zero_position_disarmed>-0.5</zero_position_disarmed>
-<zero_position_armed>-0.5</zero_position_armed>
+<channel name="gimbal_pitch">
+          <input_index>7</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>3.1415</input_scaling>
+          <zero_position_disarmed>-0.50</zero_position_disarmed>
+          <zero_position_armed>-0.5</zero_position_armed>
+          <joint_control_type>position_gztopic</joint_control_type>
+          <gztopic>/gimbal_pitch_cmd</gztopic>
+          <joint_name>typhoon_h480::cgo3_camera_joint</joint_name>
+        </channel>
 ```
       
